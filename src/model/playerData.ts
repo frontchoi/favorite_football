@@ -8,6 +8,8 @@ export type TPlayerList = {
     team: string;
     position: string;
     number: number;
+    thume: number;
+    legend?: boolean;
 }
 
 export type TPlayers = {
