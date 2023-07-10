@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Players } from './Players';
+import { TPlayerData } from './model/playerData';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let playerData: TPlayerData;
+
+const App: React.FC = () => {
+
+    const [player, setPlayer] = useState<TPlayerData>(playerData);
+    // <...> = 제네릭 타입
+    const changeTeam = () => {
+
+    }
+
+    return (
+        <div className="App">
+            <Players playerData={playerData} />
+        </div>
+    );
 }
 
 export default App;

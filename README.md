@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# `Germany`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+마르코 로이스 / 토마스 뮐러 / 카이 하베르츠 / 토니 크로스 / 안토니오 뤼디거 / 마츠 훔멜스 / 마누엘 노이어 / 테어 슈테겐
 
-## Available Scripts
+# `France`
 
-In the project directory, you can run:
+카림 벤제마 / 킬리안 음바페 / 앙투안 그리즈만 / 폴 포그바 / 아우랠리앙 추아메니 / 에두아르 카마빙가 / 라파엘 바란 / 쥘 쿤데 / 웨슬리 포파나
 
-### `npm start`
+# `England`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+해리 케인 / 잭 그릴리쉬 / 부카요 사카 / 데클란 라이스 / 주드 벨링엄 / 해리 매과이어 / 카일 워커 / 루크 쇼
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# `Portugal`
 
-### `npm test`
+크리스티아누 호날두 / 주앙 펠릭스 / 브루노 페르난데스 / 후벤 네베스 / 디오구 달롯 / 주앙 칸셀루
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# `Italy`
 
-### `npm run build`
+페데르코 키에사 / 조르지뉴 / 산드로 토날리 / 니콜라스 바렐라 / 알렉산드로 바스토니 / 잔루이지 돈나룸마
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# `Spain`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+알바로 모라타 / 니코 윌리암스 / 다니 올모 / 파블로 가비 / 로드리 / 아이메릭 라포르테 / 다비드 데헤아
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# `Netherlands`
 
-### `npm run eject`
+멤피스 데파이 / 코디 각포 / 프랑키 더 용 / 버질 반 다이크 / 마티아스 데 리흐트
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# `Belgium`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+로멜루 루카쿠 / 에당 아자르 / 케빈 데브라이너 / 유리 틸레만스 / 티보 쿠르투아
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# `Norway`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+엘링 홀란드 / 마르틴 외데고르
 
-## Learn More
+# `Croatia`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+루카 모드리치 / 요슈코 크바르디올
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# `Brazil`
+
+네이마르 / 비니시우스 주니오르 / 가브리엘 마르티넬리 / 브루노 기마랑이스 / 루카스 파케타 / 카세미루 / 티아구 실바 / 에데르 밀리탕 / 알리송 베커
+
+# `Argentina`
+
+리오넬 메시 / 라우타로 마르티네즈 / 파울로 디발라 / 호드리고 데 파울 / 알렉시스 맥 앨리스터
+/ 엔조 페르난데스 / 리산드로 마르티네스 / 에밀리아노 마르티네즈
+
+# `Uruguay`
+
+루이스 수아레즈 / 에딘손 카바니 / 다르윈 누녜스 / 마누엘 우가르테 / 페데르코 발베르데 / 로날드 아라우호
+
+# `korea`
+
+손흥민 / 황희찬 / 이재성 / 이강인 / 김민재
