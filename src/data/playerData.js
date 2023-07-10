@@ -1,12 +1,12 @@
-playerData = {
+export const DPlayerData = {
   name: "Favorite Football",
   info: {
     category: "favorite",
     active: "player",
   },
-  players: [
+  nations: [
     {
-      nation: "독일",
+      name: "독일",
       list: [
         {
           name: "올리버 칸",
@@ -99,7 +99,7 @@ playerData = {
       ],
     },
     {
-      nation: "프랑스",
+      name: "프랑스",
       list: [
         {
           name: "티에리 앙리",
@@ -199,7 +199,7 @@ playerData = {
       ],
     },
     {
-      nation: "잉글랜드",
+      name: "잉글랜드",
       list: [
         {
           name: "마이클 오언",
@@ -316,7 +316,7 @@ playerData = {
       ],
     },
     {
-      nation: "포르투갈",
+      name: "포르투갈",
       list: [
         {
           name: "루이스 피구",
@@ -372,7 +372,7 @@ playerData = {
       ],
     },
     {
-      nation: "이탈리아",
+      name: "이탈리아",
       list: [
         {
           name: "파울로 말디니",
@@ -459,7 +459,7 @@ playerData = {
       ],
     },
     {
-      nation: "스페인",
+      name: "스페인",
       list: [
         {
           name: "라울 곤잘레스",
@@ -577,7 +577,7 @@ playerData = {
       ],
     },
     {
-      nation: "네덜란드",
+      name: "네덜란드",
       list: [
         {
           name: "에드윈 반 데 사르",
@@ -658,7 +658,7 @@ playerData = {
       ],
     },
     {
-      nation: "벨기에",
+      name: "벨기에",
       list: [
         {
           name: "에당 아자르",
@@ -699,7 +699,7 @@ playerData = {
       ],
     },
     {
-      nation: "노르웨이",
+      name: "노르웨이",
       list: [
         {
           name: "엘링 홀란드",
@@ -718,7 +718,7 @@ playerData = {
       ],
     },
     {
-      nation: "스웨덴",
+      name: "스웨덴",
       list: [
         {
           name: "즐라탄 이브라히모비치",
@@ -739,7 +739,7 @@ playerData = {
       ],
     },
     {
-      nation: "크로아티아",
+      name: "크로아티아",
       list: [
         {
           name: "다보르 슈케르",
@@ -766,7 +766,7 @@ playerData = {
       ],
     },
     {
-      nation: "브라질",
+      name: "브라질",
       list: [
         {
           name: "호나우두",
@@ -874,7 +874,7 @@ playerData = {
       ],
     },
     {
-      nation: "아르헨티나",
+      name: "아르헨티나",
       list: [
         {
           name: "디에고 마라도나",
@@ -968,7 +968,7 @@ playerData = {
       ],
     },
     {
-      nation: "우루과이",
+      name: "우루과이",
       list: [
         {
           name: "루이스 수아레즈",
@@ -1032,7 +1032,7 @@ playerData = {
       ],
     },
     {
-      nation: "대한민국",
+      name: "대한민국",
       list: [
         {
           name: "차범근",

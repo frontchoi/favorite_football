@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
-import './App.css';
-import { Players } from './Players';
+import React, { useState, useEffect, FC } from 'react';
+import { PlayerList } from './Players';
 import { TPlayerData } from './model/playerData';
+import { DPlayerData } from './data/playerData'
 
 let playerData: TPlayerData;
 
-const App: React.FC = () => {
+const App: FC = () => {
+    // <...> = 제네릭 타입 = useState 의 타입을 정해준다.
+    const [playerData, setPlayerData] = useState<TPlayerData>();
 
-    const [player, setPlayer] = useState<TPlayerData>(playerData);
-    // <...> = 제네릭 타입
+    useEffect(() => {
+        if (!DPlayerData) return;
+        setPlayerData(DPlayerData);
+    }, [DPlayerData]);
+
     const changeTeam = () => {
 
     }
 
     return (
         <div className="App">
-            <Players playerData={playerData} />
+            {playerData ? <PlayerList playerData={playerData} /> : undefined}
         </div>
     );
 }
