@@ -1,6 +1,6 @@
 import React, { useState, useEffect, FC, createContext } from 'react';
 import { ViewList } from './ViewList';
-import { TPlayerData, IPlayer } from './type/playerData';
+import { TPlayerData, IPlayer } from './Type/playerData';
 import { DataPlayer } from './data/playerData'
 import SetPosition from './Component/PlayerComponent'
 

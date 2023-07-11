@@ -1,5 +1,5 @@
 import React, { useContext, FC } from 'react'
-import { TNations } from '../type/playerData'
+import { TNations } from '../Type/playerData'
 import { AppContext } from "../App";
 interface IPlayerList extends Omit<TNations, 'name'> { }
 

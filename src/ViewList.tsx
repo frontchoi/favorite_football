@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext, FC } from 'react'
-import { TPlayerData, TNations, TPlayerDetail } from './type/playerData'
+import { TPlayerData, TNations, TPlayerDetail } from './Type/playerData'
 import { ViewPlayer } from './Component/PlayerComponent';
 import { AppContext } from "./App";
 
