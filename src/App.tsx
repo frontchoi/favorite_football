@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FC, createContext } from 'react';
-import { PlayerList } from './Players';
+import { ViewList } from './SelectList';
 import { TPlayerData, IPlayer } from './model/playerData';
 import { DataPlayer } from './data/playerData'
 import Position from './Position';
@@ -37,7 +37,7 @@ const App: FC = () => {
                         </ul>
                         <div className='field'></div>
                     </div>
-                    <PlayerList playerData={playerData} />
+                    <ViewList playerData={playerData} />
                 </> : undefined}
         </div>
     );
