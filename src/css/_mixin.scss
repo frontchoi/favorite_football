@@ -1,0 +1,75 @@
+@mixin centerAlign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin nation($nation) {
+    background: no-repeat center 44%;
+    background-image: url($nation);
+    background-size: 150% auto;
+}
+
+@mixin position($top, $left) {
+    top: $top;
+    left: $left;
+}
+
+@mixin formation(
+    $top0,
+    $left0,
+    $top1,
+    $left1,
+    $top2,
+    $left2,
+    $top3,
+    $left3,
+    $top4,
+    $left4,
+    $top5,
+    $left5,
+    $top6,
+    $left6,
+    $top7,
+    $left7,
+    $top8,
+    $left8,
+    $top9,
+    $left9,
+    $top10,
+    $left10
+) {
+    &.player0 {
+        @include position($top0, $left0);
+    }
+    &.player1 {
+        @include position($top1, $left1);
+    }
+    &.player2 {
+        @include position($top2, $left2);
+    }
+    &.player3 {
+        @include position($top3, $left3);
+    }
+    &.player4 {
+        @include position($top4, $left4);
+    }
+    &.player5 {
+        @include position($top5, $left5);
+    }
+    &.player6 {
+        @include position($top6, $left6);
+    }
+    &.player7 {
+        @include position($top7, $left7);
+    }
+    &.player8 {
+        @include position($top8, $left8);
+    }
+    &.player9 {
+        @include position($top9, $left9);
+    }
+    &.player10 {
+        @include position($top10, $left10);
+    }
+}

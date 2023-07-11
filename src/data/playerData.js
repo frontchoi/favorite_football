@@ -7,6 +7,7 @@ export const DataPlayer = {
     nations: [
         {
             name: '독일',
+            nationCode: 0,
             list: [
                 {
                     name: '올리버 칸',
@@ -21,7 +22,7 @@ export const DataPlayer = {
                     team: '첼시 FC',
                     position: 'DF',
                     number: 4,
-                    thume: 101,
+                    thume: 96,
                     legend: true,
                 },
                 {
@@ -29,7 +30,7 @@ export const DataPlayer = {
                     team: '바이에른 뮌헨',
                     position: 'MF',
                     number: 13,
-                    thume: 96,
+                    thume: 101,
                     legend: true,
                 },
                 {
@@ -100,6 +101,7 @@ export const DataPlayer = {
         },
         {
             name: '프랑스',
+            nationCode: 1,
             list: [
                 {
                     name: '티에리 앙리',
@@ -135,10 +137,11 @@ export const DataPlayer = {
                 },
                 {
                     name: '카림 벤제마',
-                    team: '알 이티하드',
+                    team: '레알 마드리드',
                     position: 'FW',
                     number: 10,
-                    thume: 9,
+                    thume: 144,
+                    legend: true,
                 },
                 {
                     name: '킬리안 음바페',
@@ -200,6 +203,7 @@ export const DataPlayer = {
         },
         {
             name: '잉글랜드',
+            nationCode: 2,
             list: [
                 {
                     name: '마이클 오언',
@@ -317,6 +321,7 @@ export const DataPlayer = {
         },
         {
             name: '포르투갈',
+            nationCode: 3,
             list: [
                 {
                     name: '루이스 피구',
@@ -373,6 +378,7 @@ export const DataPlayer = {
         },
         {
             name: '이탈리아',
+            nationCode: 4,
             list: [
                 {
                     name: '파울로 말디니',
@@ -460,6 +466,7 @@ export const DataPlayer = {
         },
         {
             name: '스페인',
+            nationCode: 5,
             list: [
                 {
                     name: '라울 곤잘레스',
@@ -490,7 +497,7 @@ export const DataPlayer = {
                     team: '리버풀 FC',
                     position: 'MF',
                     number: 14,
-                    thume: 110,
+                    thume: 143,
                     legend: true,
                 },
                 {
@@ -578,6 +585,7 @@ export const DataPlayer = {
         },
         {
             name: '네덜란드',
+            nationCode: 6,
             list: [
                 {
                     name: '에드윈 반 데 사르',
@@ -659,6 +667,7 @@ export const DataPlayer = {
         },
         {
             name: '벨기에',
+            nationCode: 7,
             list: [
                 {
                     name: '에당 아자르',
@@ -700,6 +709,7 @@ export const DataPlayer = {
         },
         {
             name: '노르웨이',
+            nationCode: 8,
             list: [
                 {
                     name: '엘링 홀란드',
@@ -719,6 +729,7 @@ export const DataPlayer = {
         },
         {
             name: '스웨덴',
+            nationCode: 9,
             list: [
                 {
                     name: '즐라탄 이브라히모비치',
@@ -740,6 +751,7 @@ export const DataPlayer = {
         },
         {
             name: '크로아티아',
+            nationCode: 10,
             list: [
                 {
                     name: '다보르 슈케르',
@@ -767,6 +779,7 @@ export const DataPlayer = {
         },
         {
             name: '브라질',
+            nationCode: 11,
             list: [
                 {
                     name: '호나우두',
@@ -875,6 +888,7 @@ export const DataPlayer = {
         },
         {
             name: '아르헨티나',
+            nationCode: 12,
             list: [
                 {
                     name: '디에고 마라도나',
@@ -969,6 +983,7 @@ export const DataPlayer = {
         },
         {
             name: '우루과이',
+            nationCode: 13,
             list: [
                 {
                     name: '루이스 수아레즈',
@@ -1033,6 +1048,7 @@ export const DataPlayer = {
         },
         {
             name: '대한민국',
+            nationCode: 14,
             list: [
                 {
                     name: '차범근',
