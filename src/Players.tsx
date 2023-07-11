@@ -35,8 +35,15 @@ export const PlayerList: FC<IPlayerDataProps> = ({ playerData }) => {
 export const Player: FC<IPlayerList> = ({ list }) => {
     return <ul className="player_list">
         {list.map((item: any, idx: number) => {
+            const { name, team, position, number, thume, legend } = item;
             return <li key={`p_${idx}`}>
-                {item.legend ? <img src={`./assets/images/thume/${item.thume}.png`} /> : <img src={`./assets/images/thume/${item.thume}.webp`} />}
+                <div className={legend ? 'thume legend' : 'thume'}>{legend ? <img src={`./assets/images/thume/${thume}.png`} /> : <img src={`./assets/images/thume/${thume}.webp`} />}</div>
+                <dl>
+                    <dt>{name}</dt>
+                    <dd>소속팀 : {team}</dd>
+                    <dd>포지션 : {position}</dd>
+                    <dd>등번호 : {number}</dd>
+                </dl>
             </li>
         })}
     </ul>

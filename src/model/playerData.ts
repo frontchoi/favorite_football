@@ -26,3 +26,5 @@ export type TPlayerDetail = {
     thume: number;
     legend?: boolean;
 }
+
+export interface IPlayer extends Omit<TPlayerDetail, 'team' | 'position'> { }

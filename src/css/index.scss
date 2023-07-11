@@ -10,7 +10,7 @@ body {
     background-color: #fff;
     // font-family: 'JetBrains Mono', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif,
     //     'Segoe UI Emoji', 'Segoe UI Symbol', 'Nanum Gothic';
-    font-family: 'KyoboHandwriting2021sjy';
+    font-family: 'Pretendard-Regular';
     color: #333;
 
     #root {
@@ -29,4 +29,87 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
     background: rgb(38, 195, 158); /*스크롤바 뒷 배경 색상*/
+}
+
+@mixin centerAlign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    @include centerAlign();
+}
+.App {
+    overflow: hidden;
+    width: 1093px;
+    & > * {
+        float: left;
+    }
+    .formation {
+        width: 693px;
+        height: 1060px;
+        .field {
+            width: 100%;
+            height: 100%;
+            background: url('../../public/assets/images/img_field.png') no-repeat 0 0;
+            opacity: 0.4;
+        }
+        .position {
+            position: relative;
+            li {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border: 8px solid red;
+                border-radius: 100%;
+                z-index: 1;
+                .thume {
+                    @include centerAlign();
+                    img {
+                        width: 80px;
+                    }
+                }
+                .name {
+                    background: red;
+                    color: #fff;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .player_list {
+        overflow-y: auto;
+        width: 400px;
+        height: 1060px;
+        li {
+            overflow: hidden;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #dfdfdf;
+            text-align: left;
+            line-height: 24px;
+            & > * {
+                float: left;
+            }
+            .thume {
+                width: 100px;
+                margin-right: 20px;
+                img {
+                    width: 100%;
+                }
+                &.legend {
+                    background: #c5bf00;
+                    img {
+                        box-shadow: 0px 0px 24px #c5bf00;
+                    }
+                }
+            }
+            dl {
+                dt {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
