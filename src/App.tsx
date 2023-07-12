@@ -5,13 +5,16 @@ import { DataPlayer } from './data/playerData'
 import SetPosition from './Component/PlayerComponent'
 
 type TSetPoistion = (num: number) => void;
-type TAppState = { player: IPlayer[]; positionNum: number; setPoistion: TSetPoistion; }
+type TPlayer = (player: IPlayer) => void;
+
+type TAppState = { player: IPlayer[]; positionNum: number; setPoistion: TSetPoistion; addPlayer: TPlayer }
 
 // 전역에 해당 객체가 들어올 것이라고 등록
 export const AppContext = createContext<TAppState>({
     player: [],
     positionNum: 0,
-    setPoistion: () => { }
+    setPoistion: () => { },
+    addPlayer: () => { }
 });
 const App: FC = () => {
     // <...> = 제네릭 타입 = useState 의 타입을 정해준다.
@@ -21,8 +24,8 @@ const App: FC = () => {
     const [selView, setSelView] = useState<string>('');
 
     useEffect(() => {
-        const player: IPlayer = { name: '', number: 0, thume: 0, idx: 0, select: false };
-        const arr: IPlayer[] = new Array(11).fill(player);
+        const p: IPlayer = { name: '', number: 0, thume: 0, idx: 0, };
+        const arr: IPlayer[] = new Array(11).fill(p);
         setPlayer(arr);
     }, []);
 
@@ -39,10 +42,16 @@ const App: FC = () => {
         else if (positionNum === 10) text = '골키퍼만'
 
         setSelView(text);
-    }, [positionNum])
+    }, [positionNum]);
 
-    const setPoistion: TSetPoistion = (num: number) => {
+    const setPoistion: TSetPoistion = (num: number): void => {
         setPositionNum(num);
+    }
+    const addPlayer: TPlayer = (obj: IPlayer): void => {
+        const p: IPlayer = { name: obj.name, number: obj.number, thume: obj.thume, idx: obj.idx };
+        const list = player
+        if (list) list[positionNum] = p;
+        setPlayer(player);
     }
     return (
         <div className="App">
@@ -54,7 +63,7 @@ const App: FC = () => {
                         }}>전체보기</li>
                         <li>현재는 {selView} 보기</li>
                     </ul>
-                    <AppContext.Provider value={{ player, positionNum, setPoistion }}>
+                    <AppContext.Provider value={{ player, positionNum, setPoistion, addPlayer }}>
                         <div className={`formation ${'fm_433'}`}>
                             <SetPosition />
                             <div className='field'></div>

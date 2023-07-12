@@ -45,6 +45,27 @@ body::-webkit-scrollbar-track {
     & > * {
         float: left;
     }
+    .popup_confirm {
+        @include centerAlign();
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 30px;
+        z-index: 2;
+        .center {
+            background-color: #fff;
+            ul {
+                li {
+                    display: inline-block;
+                    width: 50%;
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
     .txt_view {
         overflow: hidden;
         position: absolute;
@@ -68,14 +89,30 @@ body::-webkit-scrollbar-track {
         &.fm_433 {
             li {
                 border: 8px solid red;
+                .full {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    background-color: red;
+                }
                 &:nth-child(n + 4) {
                     border: 8px solid blue;
+                    .full {
+                        background-color: blue;
+                    }
                 }
                 &:nth-child(n + 7) {
                     border: 8px solid green;
+                    .full {
+                        background-color: green;
+                    }
                 }
                 &:last-child {
                     border: 8px solid yellow;
+                    .full {
+                        background-color: yellow;
+                    }
                 }
             }
         }

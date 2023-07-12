@@ -32,5 +32,4 @@ export type TPlayerDetail = {
 export interface IPlayer extends Omit<TPlayerDetail, 'team' | 'position'> {
     // name, number, thume, legend?
     idx: number;
-    select: boolean;
 }

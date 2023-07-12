@@ -1,10 +1,13 @@
-import React, { useContext, FC } from 'react'
+import React, { useState, useContext, FC } from 'react'
 import { TNations } from '../Type/playerData'
 import { AppContext } from "../App";
+import { ConfirmComponent } from './ConfirmComponent';
 interface IPlayerList extends Omit<TNations, 'name'> { }
 
 export const ViewPlayer: FC<IPlayerList> = ({ list }) => {
-    const { positionNum } = useContext(AppContext);
+    const { positionNum, addPlayer } = useContext(AppContext);
+    const [selName, setSelName] = useState<string>('');
+    const [viewConfirm, setViewConfirm] = useState<boolean>(false);
     const nationCheck = (nation: string): number => {
         let num = 0;
         switch (nation) {
@@ -48,41 +51,64 @@ export const ViewPlayer: FC<IPlayerList> = ({ list }) => {
         else if (positionNum === 10 && position !== "GK") return 'hidden'
         else return ''
     }
-    return <ul className="player_list">
-        {list.map((item: any, idx: number) => {
-            const { name, team, position, number, thume, legend, nation } = item;
-            return <li key={`p_${idx}`} className={`nation${nationCheck(nation)} ${positionCheck(position)}`}>
-                <div className={legend ? 'thume legend' : 'thume'}>{legend ? <img src={`./assets/images/thume/${thume}.png`} /> : <img src={`./assets/images/thume/${thume}.webp`} />}</div>
-                <dl>
-                    <dt>{name}</dt>
-                    {nation ? <dd>국적 : {nation}</dd> : undefined}
-                    {legend ? <dd className='legend'>레전드</dd> : undefined}
-                    <dd>소속팀 : {team}</dd>
-                    <dd>포지션 : {position}</dd>
-                    <dd>등번호 : {number}</dd>
-                </dl>
-            </li>
-        })}
-    </ul>
+    const popupReturn = (sel: boolean) => {
+        setViewConfirm(false);
+        if (sel) {
+            const num = list.findIndex((item) => item.name === selName);
+            const obj = { ...list[num], idx: num }
+            if (num) addPlayer(obj);
+        }
+    }
+    return <>
+        <ul className="player_list">
+            {list.map((item: any, idx: number) => {
+                const { name, team, position, number, thume, legend, nation } = item;
+                return <li key={`p_${idx}`} className={`nation${nationCheck(nation)} ${positionCheck(position)}`}
+                    onClick={() => {
+                        setSelName(name);
+                        setViewConfirm(!viewConfirm);
+                    }}>
+                    <div className={legend ? 'thume legend' : 'thume'}><img src={`./assets/images/thume/${thume}.webp`} /></div>
+                    <dl>
+                        <dt>{name}</dt>
+                        {nation ? <dd>국적 : {nation}</dd> : undefined}
+                        {legend ? <dd className='legend'>레전드</dd> : undefined}
+                        <dd>소속팀 : {team}</dd>
+                        <dd>포지션 : {position}</dd>
+                        <dd>등번호 : {number}</dd>
+                    </dl>
+                </li>
+            })}
+        </ul>
+        {viewConfirm ? <ConfirmComponent name={selName} popupReturn={popupReturn} /> : undefined}
+    </>
 }
 
 export const SetPosition: FC = () => {
     // const { name, number, thume, legend, idx, select } = player;
     const { player, setPoistion } = useContext(AppContext);
+    const [select, setSelect] = useState<number>(0);
+    const [complete, setComplete] = useState<boolean>(false);
 
+    console.log('playerplayer', player);
     return (
         <ul className='position'>
             {player.map((item, idx) => {
                 return <li className={`player${idx}`} key={idx} onClick={() => {
                     setPoistion(idx);
+                    setSelect(idx);
                 }}>
-                    {item.select ?
+                    {select === idx ?
+                        <div className='full' />
+                        : undefined}
+                    {item.name ?
                         <>
                             <div className='thume'>
-                                {item.legend ? <img src={`./assets/images/thume/${item.thume}.png`} /> : <img src={`./assets/images/thume/${item.thume}.webp`} />}
+                                <img src={`./assets/images/thume/${item.thume}.webp`} />
                             </div>
-                            <p className='name'>토마스 뮐러 {idx}</p>
-                        </> : undefined}
+                            <p className='name'>{item.name}</p>
+                        </>
+                        : undefined}
                 </li>
             })}
         </ul>
